@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap");
+
 *,
 *::before,
 *::after {
@@ -8,16 +10,81 @@ html {
   font-size: 62.5%; /* AKA 10px */
 }
 
-.DMY-lable {
-  font-size: 1rem;
+body {
+  background-color: hsl(0, 0%, 94%);
+  font-family: "Poppins";
 }
 
-.DMY-flex-upper-containor {
+.App {
+  height: 85vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-hr {
-  width: 100px;
-  display: inline-block;
+.containor {
+  margin-top: 70px;
+  width: 50%;
+  background-color: hsl(0, 0%, 100%);
+  padding: 25px;
+  font-size: 32px;
+  border-radius: 20px;
+  border-bottom-right-radius: 200px;
+}
+
+.containor-upper {
+  display: flex;
+  font-size: x-small;
+  font-weight: bold;
+  color: hsl(0, 1%, 44%);
+}
+
+input {
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid hsl(0, 0%, 86%);
+  padding: 5px 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="number"] {
+  font-size: x-large;
+  height: 50px;
+  width: 80%;
+  max-width: 140px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 10px;
+  width: 300px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.line-and-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line {
+  background-color: hsl(0, 0%, 86%);
+  height: 1px;
+  width: 80%;
+}
+
+.arrow {
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 100%;
+  padding: 15px;
+  border: none;
 }
