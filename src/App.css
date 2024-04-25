@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap");
-
 *,
 *::before,
 *::after {
@@ -12,8 +10,25 @@ html {
 
 body {
   background-color: hsl(0, 0%, 94%);
-  font-family: "Poppins";
+  font-family: Poppins;
 }
+
+@font-face {
+  font-family: Poppins;
+  src: url(../src/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: Poppins-EBI;
+  src: url(../src/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+  font-family: poppins-I;
+  src: url(../src/fonts/Poppins-Italic.ttf);
+}
+
+/* Main Containor */
 
 .App {
   height: 85vh;
@@ -23,25 +38,33 @@ body {
   align-items: center;
 }
 
+/* The containors */
+
 .containor {
   margin-top: 70px;
   width: 50%;
   background-color: hsl(0, 0%, 100%);
   padding: 25px;
-  font-size: 32px;
   border-radius: 20px;
   border-bottom-right-radius: 200px;
 }
 
 .containor-upper {
   display: flex;
-  font-size: x-small;
+  font-size: 1rem;
   font-weight: bold;
   color: hsl(0, 1%, 44%);
 }
 
+.containor-lower {
+  font-family: Poppins-EBI;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+}
+
+/* The input field styling  */
+
 input {
-  font-size: 12px;
+  font-size: 1.3rem;
   font-weight: bold;
   border: 1px solid hsl(0, 0%, 86%);
   padding: 5px 15px;
@@ -49,12 +72,13 @@ input {
   margin-top: 10px;
 }
 
-input:focus {
+.inputNormal:focus {
   outline: none;
+  border-color: hsl(259, 100%, 65%);
 }
 
 input[type="number"] {
-  font-size: x-large;
+  font-size: 2.5rem;
   height: 50px;
   width: 80%;
   max-width: 140px;
@@ -71,15 +95,25 @@ input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
 
+/* The input errors */
+
+.inputError {
+  outline: none;
+  border-color: hsl(0, 100%, 67%);
+}
+
+/* The line and the awwor svg */
+
 .line-and-arrow {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  margin: 1rem 0;
 }
 .line {
   background-color: hsl(0, 0%, 86%);
   height: 1px;
-  width: 80%;
+  width: 85%;
 }
 
 .arrow {
@@ -87,4 +121,50 @@ input[type="number"] {
   border-radius: 100%;
   padding: 15px;
   border: none;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.arrow:active {
+  background-color: black;
+}
+
+/* Error text */
+
+.redText {
+  color: hsl(0, 100%, 67%);
+}
+
+.errorText {
+  font-family: Poppins-I;
+  font-weight: 200;
+  margin-top: 3px 0 0 0;
+}
+
+/* The media queries */
+
+@media screen and (min-width: 360px) and (max-width: 650px) {
+  .containor {
+    width: 90%;
+    height: 80%;
+  }
+
+  .line-and-arrow {
+    justify-content: center;
+  }
+
+  .arrow {
+    position: absolute;
+  }
+
+  .line {
+    width: 100vw;
+    margin: 52px 0 52px 0;
+  }
+
+  input[type="number"] {
+    font-size: 2rem;
+  }
 }
