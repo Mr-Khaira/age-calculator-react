@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import LineAndArrowComp from "./LineAndArrowComp";
 
-export default function FormCmoponent({ yearToday, onSub }) {
+export default function FormComponent({ yearToday, onSub }) {
   const [dayErrorState, setDayError] = useState(false);
   const [monthErrorState, setMonthError] = useState(false);
   const [yearErrorState, setYearError] = useState(false);
@@ -18,7 +18,9 @@ export default function FormCmoponent({ yearToday, onSub }) {
   // form object to
   useEffect(() => {
     const subscription = watch((value) => {
-      if ([1, 3, 5, 7, 8, 10, 12].includes(value.month)) {
+      // This isNaN() is added here, for if the user enters an invalid day
+      // value while moth value has not even been touched.
+      if ([1, 3, 5, 7, 8, 10, 12].includes(value.month) || isNaN(value.month)) {
         if (value.day < 1 || value.day > 31) {
           setDayError(true);
         } else {
@@ -88,7 +90,7 @@ export default function FormCmoponent({ yearToday, onSub }) {
             {...register("day", {
               valueAsNumber: true,
               min: {
-                value: 0,
+                value: 1,
               },
               max: {
                 value: 31,
