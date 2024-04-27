@@ -93,6 +93,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
+  appearance: textfield;
 }
 
 /* The input errors */
@@ -148,7 +149,11 @@ input[type="number"] {
 @media screen and (min-width: 360px) and (max-width: 650px) {
   .containor {
     width: 90%;
-    height: 80%;
+    height: 70%;
+  }
+
+  .containor-lower {
+    margin-top: 4rem;
   }
 
   .line-and-arrow {
