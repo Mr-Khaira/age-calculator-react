@@ -35,4 +35,4 @@ function App() {
 }
 export default App;
 
-// Distribute the whole jsx into different conponents.
+// Create the age calculation function and then add it as the prop to the arrow line component and also move lower-component to other component.
