@@ -4,8 +4,6 @@ import FormComponent from "./components/FormComponent";
 import LowerContainor from "./components/LowerContainor";
 
 function App() {
-  const dateToday = new Date().getDate(); // For calculaation of age
-  const monthToday = new Date().getMonth() + 1; // For calculaation of age
   const yearToday = new Date().getFullYear();
 
   const [daysSinceBd, setDaySinceBd] = useState(0);
@@ -31,12 +29,13 @@ function App() {
           month={monthSinceBd}
           year={yearSinceBd}></LowerContainor>
       </div>
+      <h5>
+        Discrepancies may exist due to divergence in unit of days per months
+      </h5>
     </div>
   );
 }
 export default App;
-
-// Create the age calculation function and then add it as the prop to the arrow line component and also move lower-component to other component.
 
 function age(birthDay, birthMonth, birthYear) {
   let today = new Date();
@@ -45,26 +44,68 @@ function age(birthDay, birthMonth, birthYear) {
   let currentMonth = today.getMonth() + 1;
   let currentYear = today.getFullYear();
 
-  let yearsDiff = currentYear - birthYear;
-  let monthDiff = currentMonth - birthMonth;
-  let dayDiff = currentDate - birthDay;
+  let yearsDiffInclusive = currentYear - birthYear - 1;
+  let noOfLeaps = (yearsDiffInclusive % 4) + 1;
+  let daysWithinYears = yearsDiffInclusive * 365 + noOfLeaps;
 
-  if (birthMonth > currentMonth) {
-    monthDiff = 12 - birthMonth + currentMonth; // Remaning months of this year has to be added to the months until the birthday in the next year.
-    yearsDiff--; // Birthday is not yet here so -1.
+  let daysInByear = 0;
+  let daysInCurrYear = 0;
+
+  if (
+    (currentYear % 4 === 0 && currentYear % 100 !== 0) ||
+    currentYear % 400 === 0
+  ) {
+    daysInCurrYear =
+      366 - noOfDaysInThisYr(currentDate, currentMonth, currentYear);
+  } else {
+    daysInCurrYear =
+      365 - noOfDaysInThisYr(currentDate, currentMonth, currentYear);
   }
+  daysInByear = noOfDaysInThisYr(birthDay, birthMonth, birthYear);
 
-  if (birthDay > currentDate) {
-    monthDiff--; // NOT a complemete month, ie the dff is less than even 28.
-    let daysInTheMonth = new Date(birthYear, birthMonth, 0).getDate();
-    dayDiff = daysInTheMonth - birthDay + currentDate + 1; // Compensating 1 day.
+  let totalDays = daysWithinYears + daysInCurrYear + daysInByear;
 
-    if (daysInTheMonth === 31) {
-      dayDiff = daysInTheMonth - birthDay + currentDate;
-    } else if (daysInTheMonth === 29) {
-      dayDiff = daysInTheMonth - birthDay + currentDate + 2; // Compensating 2 days.
+  return daysToDMY(totalDays);
+}
+
+function noOfDaysInThisYr(birthDay, birthMonth, birthYear) {
+  let remaningDays = birthDay;
+
+  for (let i = birthMonth - 1; i > 0; i--) {
+    if ([1, 3, 5, 7, 8, 10, 12].includes(i)) {
+      remaningDays = remaningDays + 31;
+    }
+    if ([4, 6, 9, 11].includes(i)) {
+      remaningDays = remaningDays + 30;
+    }
+    if ([2].includes(i)) {
+      if (
+        (birthYear % 4 === 0 && birthYear % 100 !== 0) ||
+        birthYear % 400 === 0
+      ) {
+        remaningDays = remaningDays + 29;
+      } else {
+        remaningDays = remaningDays + 28;
+      }
     }
   }
 
-  return [dayDiff, monthDiff, yearsDiff];
+  if ((birthYear % 4 === 0 && birthYear % 100 !== 0) || birthYear % 400 === 0) {
+    return 366 - remaningDays;
+  } else {
+    return 365 - remaningDays;
+  }
+}
+
+function daysToDMY(days) {
+  const months = days / 30.4375;
+  const years = months / 11.99953;
+
+  const actualYears = Math.floor(years);
+  const actualMonths = Math.floor((years - Math.floor(years)) * 10);
+  const actualDays = Math.floor((months - Math.floor(months)) * 31.4375);
+
+  console.log(actualDays, actualMonths, actualYears);
+
+  return [actualDays, actualMonths, actualYears];
 }

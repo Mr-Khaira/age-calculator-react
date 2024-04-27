@@ -103,7 +103,7 @@ input[type="number"] {
   border-color: hsl(0, 100%, 67%);
 }
 
-/* The line and the awwor svg */
+/* The line and the arror svg */
 
 .line-and-arrow {
   display: flex;
@@ -149,7 +149,6 @@ input[type="number"] {
 @media screen and (min-width: 360px) and (max-width: 650px) {
   .containor {
     width: 90%;
-    height: 70%;
   }
 
   .containor-lower {
