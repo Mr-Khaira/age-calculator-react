@@ -22,11 +22,11 @@ Harkaran Singh Khaira
 
 # Field Validation:-
 
-![Field Validation](https://ibb.co/fSK4c0m)
+![Field Validation](/AgeCalculatorSS/TouchedField.png)
 
 # Touched Field:-
 
-![Touched Field]([/age-calc/AgeCalculatorSS/TouchedField.png](https://ibb.co/fSK4c0m))
+![Touched Field]([AgeCalculatorSS/TouchedField.png])
 
 # Mobile Desing:-
 
