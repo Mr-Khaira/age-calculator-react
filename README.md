@@ -14,8 +14,7 @@ This project is to demonstrate the use of React-Hook-Form library [React-Hook-Fo
 If an input field has been touched and then the user clicks away, the error is displayed as "This field is required", but if an input is invalid "This is not a valid day, month or
 year"(respective value is displayed).
 
-I will further work on more challenging projects in the future, as we all have to begin somewhere.
-
+I will further work on more challenging projects in the future.
 Thanks ✌️.
 
 Harkaran Singh Khaira
