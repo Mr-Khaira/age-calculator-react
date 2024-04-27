@@ -22,7 +22,7 @@ Harkaran Singh Khaira
 
 # Field Validation:-
 
-![Field Validation](/AgeCalculatorSS/TouchedField.png)
+![Field Validation](/AgeCalculatorSS/FieldValidation.png)
 
 # Touched Field:-
 
