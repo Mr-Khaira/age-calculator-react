@@ -14,9 +14,9 @@ function App() {
     // Call the age calculation function.
     const theAge = age(date.day, date.month, date.year);
     if (theAge) {
-      setDaySinceBd(theAge[0]);
-      setMonthSinceBd(theAge[1]);
-      setYearSinceBd(theAge[2]);
+      setDaySinceBd(Math.abs(theAge[0]));
+      setMonthSinceBd(Math.abs(theAge[1]));
+      setYearSinceBd(Math.abs(theAge[2]));
     }
   }
 
@@ -102,10 +102,8 @@ function daysToDMY(days) {
   const years = months / 11.99953;
 
   const actualYears = Math.floor(years);
-  const actualMonths = Math.floor((years - Math.floor(years)) * 10);
-  const actualDays = Math.floor((months - Math.floor(months)) * 31.4375);
-
-  console.log(actualDays, actualMonths, actualYears);
+  const actualMonths = Math.floor((years - Math.floor(years)) * 11.99953);
+  const actualDays = Math.floor((months - Math.floor(months)) * 30.4375);
 
   return [actualDays, actualMonths, actualYears];
 }
