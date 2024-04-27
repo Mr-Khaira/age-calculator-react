@@ -26,7 +26,7 @@ Harkaran Singh Khaira
 
 # Touched Field:-
 
-![Touched Field](/age-calc/AgeCalculatorSS/TouchedField.png)
+![Touched Field]([/age-calc/AgeCalculatorSS/TouchedField.png](https://ibb.co/fSK4c0m))
 
 # Mobile Desing:-
 
