@@ -26,12 +26,12 @@ Harkaran Singh Khaira
 
 # Touched Field:-
 
-![Touched Field]([AgeCalculatorSS/TouchedField.png])
+![Touched Field](/AgeCalculatorSS/TouchedField.png)
 
 # Mobile Desing:-
 
-![Mobile Desing](/age-calc/AgeCalculatorSS/mobileDesign.png)
+![Mobile Desing](/AgeCalculatorSS/mobileDesign.png)
 
 # Working:-
 
-![Working](/age-calc/AgeCalculatorSS/OK.png)
+![Working](/AgeCalculatorSS/OK.png)
