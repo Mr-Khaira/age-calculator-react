@@ -138,6 +138,10 @@ input[type="number"] {
   color: hsl(0, 100%, 67%);
 }
 
+.purple-text {
+  color: hsl(259, 100%, 65%);
+}
+
 .errorText {
   font-family: Poppins-I;
   font-weight: 200;

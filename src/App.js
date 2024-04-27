@@ -6,9 +6,9 @@ import LowerContainor from "./components/LowerContainor";
 function App() {
   const yearToday = new Date().getFullYear();
 
-  const [daysSinceBd, setDaySinceBd] = useState(0);
-  const [monthSinceBd, setMonthSinceBd] = useState(0);
-  const [yearSinceBd, setYearSinceBd] = useState(0);
+  const [daysSinceBd, setDaySinceBd] = useState(NaN);
+  const [monthSinceBd, setMonthSinceBd] = useState(NaN);
+  const [yearSinceBd, setYearSinceBd] = useState(NaN);
 
   function onSub(date) {
     // Call the age calculation function.

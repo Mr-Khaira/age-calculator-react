@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# The age calculating App with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is to demonstrate the use of React-Hook-Form library [React-Hook-Form](https://react-hook-form.com/). The app allows users to calculate their age by entering their birth date.
 
-## Available Scripts
+# Project demonstrates:-
 
-In the project directory, you can run:
+1. The use of rhf for form validation.
+2. CSS from scratch.
+3. Use of svg images.
+4. Use of touched field method.
+5. Use of Date object.
+6. Use of custom font(.ttf) in CSS
 
-### `npm start`
+If an input field has been touched and then the user clicks away, the error is displayed as "This field is required", but if an input is invalid "This is not a valid day, month or
+year"(respective value is displayed).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I will further work on more challenging projects in the future, as we all have to begin somewhere.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Thanks ✌️.
 
-### `npm test`
+Harkaran Singh Khaira
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Field Validation:-
 
-### `npm run build`
+![Field Validation](/age-calc/AgeCalculatorSS/FieldValidation.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Touched Field:-
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Touched Field](/age-calc/AgeCalculatorSS/TouchedField.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Mobile Desing:-
 
-### `npm run eject`
+![Mobile Desing](/age-calc/AgeCalculatorSS/mobileDesign.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Working:-
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Working](/age-calc/AgeCalculatorSS/OK.png)
