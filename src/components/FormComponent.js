@@ -71,7 +71,7 @@ export default function FormComponent({ yearToday, onSub }) {
       <div className="containor-upper">
         <div>
           <label
-            type="DMY"
+            type="number"
             className={
               (touchedFields.day && !watchDay) || dayErrorState ? "redText" : ""
             }>
@@ -109,7 +109,7 @@ export default function FormComponent({ yearToday, onSub }) {
         </div>
         <div>
           <label
-            type="DMY"
+            type="number"
             className={
               (touchedFields.month && !watchMonth) || monthErrorState
                 ? "redText"
@@ -149,7 +149,7 @@ export default function FormComponent({ yearToday, onSub }) {
         </div>
         <div>
           <label
-            type="DMY"
+            type="number"
             className={
               (touchedFields.year && !watchYear) || yearErrorState
                 ? "redText"
